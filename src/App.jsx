@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useEffect, useState } from 'react';
 import { createContext } from 'react';
-import { weatherApiCall } from './api/apiRequest';
+import { weatherApiCall } from './util/apiRequest';
 
 export const WeatherStateContext = createContext();
 export const CheckStateContext = createContext();

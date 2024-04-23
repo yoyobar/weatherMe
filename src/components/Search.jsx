@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { WeatherStateContext } from '../App';
-import { weatherApiSearch } from '../api/apiRequest';
+import { weatherApiSearch } from '../util/apiRequest';
 
 const cityDataKr = ['서울', '부산', '대구', '대전', '광주', '인천'];
 const cityData = ['Seoul', 'Busan', 'Daegu', 'Daejeon', 'Gwangju', 'Incheon'];
