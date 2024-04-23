@@ -6,7 +6,7 @@ import { WeatherStateContext } from '../App';
 
 export default function FootCard() {
     const { weather } = useContext(WeatherStateContext);
-    const isMobile = useMediaQuery({ maxWidth: '1024px' });
+    const isMobile = useMediaQuery({ maxWidth: 1024 });
     const mockData = [1, 2, 3, 4, 5, 6, 7];
 
     return (
