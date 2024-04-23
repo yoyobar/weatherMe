@@ -7,7 +7,6 @@ import Loading from './Loading';
 export default function Carousel({ weather, index }) {
     const tempData = useTempData(weather, index);
     function dateData() {
-        console.log(weather);
         const splitDate = weather[0].date.split('-');
         const enDate = new Intl.DateTimeFormat('en', { month: 'short' }).format(splitDate[1]);
         return `${splitDate[0]}, ${enDate} ${splitDate[2]}`;
@@ -15,7 +14,7 @@ export default function Carousel({ weather, index }) {
 
     return (
         <>
-            <div className='border-b-2 border-slate-600 flex justify-between flex-col gap-4 pt-6 pb-6 font-mono text-white rounded-3xl pl-4 pr-4 h-96 bg-gradient-to-tl to-purple-700 to-90% from-gray-700 from-30%'>
+            <div className='relative border-b-2 border-slate-600 flex justify-between flex-col gap-4 pt-6 pb-6 font-mono text-white rounded-3xl pl-4 pr-4 h-96 bg-gradient-to-tl to-purple-700 to-90% from-gray-700 from-30%'>
                 {weather ? null : <Loading />}
                 <div className='text-xl flex'>
                     <img className='w-6 h-6 hover:brightness-75' src={location}></img>
@@ -58,6 +57,7 @@ export default function Carousel({ weather, index }) {
                     </nav>
                 </aside>
             </div>
+            <Loading />
         </>
     );
 }
