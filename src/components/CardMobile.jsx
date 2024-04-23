@@ -9,7 +9,7 @@ export default function CardMobile({ weather, index }) {
 
     return (
         <div className='relative font-mono'>
-            <div className='w-10 h-10 bg-slate-200 rounded-xl flex flex-col justify-center items-center'>
+            <div className='w-10 h-10 bg-slate-400 rounded-xl flex flex-col justify-center items-center'>
                 <img
                     className='rounded-sm relative z-10'
                     src={

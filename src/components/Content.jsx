@@ -7,9 +7,9 @@ import { useContext } from 'react';
 
 export default function Content() {
     const { weather, setSlide } = useContext(WeatherStateContext);
-    const mockData = [1, 2, 3, 4, 5];
+    const isUpdate = Object.keys(weather).length !== 0;
 
-    var settings = {
+    let settings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -31,12 +31,19 @@ export default function Content() {
     };
     return (
         <div className='w-full h-full flex justify-center mt-8'>
-            <div className='min-w-96'>
-                <Slider {...settings}>
-                    {mockData.map((item, index) => (
-                        <Carousel key={item} index={index} weather={weather[index] ? weather[index] : null} />
-                    ))}
-                </Slider>
+            <div
+                className={isUpdate ? 'w-full' : 'animate-pulse'}
+                style={isUpdate ? { width: '100%' } : { width: 'calc(100% - 30px)' }}
+            >
+                {isUpdate ? (
+                    <Slider {...settings}>
+                        {weather.map((item, index) => (
+                            <Carousel key={item} index={index} weather={weather[index] ? weather[index] : null} />
+                        ))}
+                    </Slider>
+                ) : (
+                    <Carousel />
+                )}
             </div>
         </div>
     );
