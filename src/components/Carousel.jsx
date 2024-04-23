@@ -7,7 +7,8 @@ import Loading from './Loading';
 export default function Carousel({ weather, index }) {
     const tempData = useTempData(weather, index);
     function dateData() {
-        const splitDate = weather[index].date.split('-');
+        console.log(weather);
+        const splitDate = weather[0].date.split('-');
         const enDate = new Intl.DateTimeFormat('en', { month: 'short' }).format(splitDate[1]);
         return `${splitDate[0]}, ${enDate} ${splitDate[2]}`;
     }
