@@ -13,7 +13,7 @@ export default function Carousel({ weather, index }) {
 
     return (
         <div>
-            <div className='w-full relative border-b-2 border-slate-600 flex justify-between flex-col gap-4 pt-6 pb-6 font-mono text-white rounded-3xl pl-4 pr-4 h-96 bg-gradient-to-tl to-purple-700 to-90% from-gray-700 from-30%'>
+            <div className='w-full relative border-b-2 border-slate-600 flex justify-between flex-col gap-4 pt-6 pb-6 font-mono text-white rounded-3xl pl-2 pr-2 h-96 bg-gradient-to-tl to-purple-700 to-90% from-gray-700 from-30%'>
                 <div className='text-xl flex'>
                     <img className='w-6 h-6 hover:brightness-75' src={location}></img>
                     <div className='wl'>{weather ? weather[0].city : '...'}</div>
@@ -34,7 +34,7 @@ export default function Carousel({ weather, index }) {
                 </div>
                 <div className='cursor-pointer w-32 border-b border-slate-400'>{weather ? dateData() : '...'}</div>
 
-                <aside className='w-full pl-8 pr-8 flex justify-between'>
+                <aside className='w-full flex justify-between'>
                     <nav className='flex w-4/12 sm:text-xs md:text-lg lg:text-lg flex-col items-center'>
                         <div>습도</div>
                         <div>{weather ? weather[index].humidity + '%' : '...'}</div>
@@ -49,7 +49,7 @@ export default function Carousel({ weather, index }) {
                     </nav>
                     <nav className='flex w-4/12 sm:text-xs md:text-lg lg:text-lg flex-col items-center'>
                         <div>풍속</div>
-                        <div>{weather ? weather[index].wind + 'mph' : '...'}</div>
+                        <div>{weather ? weather[index].wind + 'm/s' : '...'}</div>
                     </nav>
                 </aside>
             </div>
