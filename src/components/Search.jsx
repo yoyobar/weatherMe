@@ -1,10 +1,11 @@
 import { useContext, useState } from 'react';
 import { WeatherStateContext } from '../App';
 
+const cityDataKr = ['서울', '부산', '대구', '대전', '광주', '인천'];
+const cityData = ['Seoul', 'Busan', 'Daegu', 'Daejeon', 'Gwangju', 'Incheon'];
+
 export default function Search() {
     const { weatherApiSearch } = useContext(WeatherStateContext);
-    const cityDataKr = ['서울', '부산', '대구', '대전', '광주', '인천'];
-    const cityData = ['Seoul', 'Busan', 'Daegu', 'Daejeon', 'Gwangju', 'Incheon'];
     const [show, setShow] = useState(false);
     const [input, setInput] = useState('');
 
