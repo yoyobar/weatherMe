@@ -66,7 +66,7 @@ export default function Search() {
                 onFocus={searchFocus}
                 onBlur={searchBlur}
                 onChange={inputChange}
-                className='focus:bg-slate-400 w-full p-1 pl-8 rounded-lg outline-none bg-slate-200 placeholder:text-slate-600'
+                className='focus:bg-slate-400 transition duration-200 w-full p-1 pl-8 rounded-lg outline-none bg-slate-200 placeholder:text-slate-600'
                 placeholder='Search Location...'
             ></input>
             {visible && (

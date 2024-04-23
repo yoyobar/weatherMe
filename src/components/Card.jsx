@@ -8,8 +8,8 @@ export default function Card({ weather, index }) {
     const tempData = useTempData(weather[slide], index);
 
     return (
-        <div className='relative font-mono'>
-            <div className='w-24 h-24 bg-slate-400 text-slate-100 rounded-xl flex flex-col items-center'>
+        <div className=' relative font-mono'>
+            <div className='w-24 h-24 transition duration-300 hover:bg-slate-500 bg-slate-400 text-slate-100 rounded-xl flex flex-col items-center'>
                 <div>{tempData ? tempData : '...'}</div>
                 <img
                     className='rounded-sm relative z-10 w-10'
